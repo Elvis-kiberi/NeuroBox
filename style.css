@@ -1,391 +1,53 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+html,body{
+    background: #6665ee;
+    font-family: 'Poppins', sans-serif;
 }
-body
-{
-    font-family: 'Oswald', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.5em;
-    overflow-x: hidden;
-    background-image: url(bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+::selection{
+    color: #fff;
+    background: #6665ee;
 }
 .container{
-    position: relative;
-    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.inner_main_menu
- {
-     margin: 0 auto;
-     width: 1170px;
-}    
-.inner_main_menu ul
-{
-    margin: 0; 
-    padding: 80px 0 0; 
-    list-style: none;
-    text-align: right;
-}    
-.inner_main_menu ul li
-{
-    float: none; 
-    display: inline-block;
-    position: relative;
-    
-}    
-.inner_main_menu ul li:nth-child(1)
-{
-    float: left;
-}    
-.inner_main_menu ul li:nth-child(2)
-{
-    float: left;
-}    
-.inner_main_menu ul li:nth-child(3)
-{
-    float: left;
-}    
-.inner_main_menu ul li a
-{
-    color: #262626; 
-    font-size: 20px; 
-    text-transform: uppercase;
-    text-decoration: none; 
-    display: block;
-    padding: 10px 20px;
-}    
-.inner_main_menu ul li a:hover
-{
-    color: #0387c9
-}  
-.inner_main_menu ul li ul
-{
-    position: absolute; 
-    top: 40px; left: -9999999px; 
-    width: 200px;
-    background: #262626; 
-    padding: 0;
-}  
-.inner_main_menu ul li:hover ul
-{
-    left: 0px;
-}   
-.inner_main_menu ul li ul li
-{
-    float: left;
-    width: 100%;
-    text-align: left;
-}  
-.inner_main_menu ul li ul li a
-{
-    color: #fff;
-    text-transform: capitalize; 
+.container .form{
+    background: #fff;
+    padding: 30px 35px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container .form form .form-control{
+    height: 40px;
     font-size: 15px;
-}  
-.inner_main_menu ul li ul li a:hover
-{
-    background: #ddd; 
-    color: #262626;
-}  
-.inner_main_menu ul li ul li ul
-{
-   top : 0; 
-   left: -999999px;
-}  
-.inner_main_menu ul li:hover ul li ul
-{
-    top: 0; 
-    left: -999999px;
-}  
-.inner_main_menu ul li ul li:hover ul
-{
-    top: 0; 
-    left: 200px;
-}  
-.inner_main_menu ul li:hover a
-{
-    color: #6FDA44
-}  
-.inner_main_menu ul li:hover ul li a
-{
-    color: #ffffff
-}  
-.inner_main_menu ul li ul li a:hover
-{
-    color: #262626
-}  
-.inner_main_menu ul li ul li:hover a
-{
-    background: #ddd; 
-    color: #262626;
-}  
-.inner_main_menu ul li ul li:hover ul li a
-{
-    background: #262626;
+}
+.container .form form .forget-pass{
+    margin: -15px 0 15px 0;
+}
+.container .form form .forget-pass a{
+   font-size: 15px;
+}
+.container .form form .button{
+    background: #6665ee;
     color: #fff;
-}  
-.inner_main_menu ul li ul li ul li a:hover
-{
-    background: #ddd; 
-    color: #262626;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
-.navigation
-{
-    position: fixed;
-    width: 300px ;
-    height: 100%;
-    background: #00387b;
-    transition: 0.5s;
-    overflow: hidden;
-    border-radius: 35px;
+.container .form form .button:hover{
+    background: #5757d1;
 }
-.navigation.active
-{
-    width: 60px;
+.container .form form .link{
+    padding: 5px 0;
 }
-.navigation ul
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.container .form form .link a{
+    color: #6665ee;
 }
-.navigation ul li
-{
-    position: relative;
-    width: 100%;
-    list-style: none;
+.container .login-form form p{
+    font-size: 14px;
 }
-.navigation ul li:hover{
-    background: #8ac7e4  ;
-}
-.navigation ul li:nth-child(1)
-{
-    margin-bottom: 20px;
-}
-.navigation ul li:nth-child(1)hover
-{
-    background: transparent;
-    height: 20px;
-}    
-.navigation ul li a
-{
-    position: relative;
-    display: block;
-    display: block;
-    display: flex;
-    text-decoration: none;
-    color: white;
-
-}
-.navigation ul li a .icon
-{
-    position: relative;
-    display: block;
-    min-width:60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-}
-.navigation ul li a .icon .material
-{
-    font-size: 24px;
-}
-.navigation ul li a .title
-{
-    position: relative;
-    display: block;
-    padding: 15px;
-    height: 60px;
-    line-height: 20px;
-    white-space: nowrap;
-}
-.main
-{
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 310px;
-    min-height: 100vh;
-    background: rgba(0,0,0,.5);
-    transition: 0.5s;
-    border-radius: 45px;
-}
-.main.active
-{
-    width: calc(100% - 60px);
-    left: 60px;
-}
-.main .topbar
-{
-    height: 60px;
-    padding: 0 10px ;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.toggle
-{
-    position: relative;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    color: #ffffff;
-}
-.toggle::before
-{
-    content: url(file:///C:/Users/USER/Downloads/menu_black_24dp.svg);
-    font-family: fontGoogle;
-    position: absolute;
-    height: 100px;
-    width: 60px;
-    line-height: 60px;
-    font-size: 24px;
-    text-align: center;
-    color: #000;
-}
-.headerTitle
-{
-    position: relative;
-    width: 650px;
-    margin:  15px;
-    color: #ffffff;
-}
-.headerTitle label
-{
-    position: relative;
-    width: 100%;
-}
-.detail
-{
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    padding-top: 1;
-    padding: 20px;
-    padding-left: 10px;
-    color: #ffffff;
-}
-.info h3
-{
-    font-weight: 600;
-}
-.btn
-{
-    position: relative;
-    padding: 5px 10px;
-    background: #00387b;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    width: 120px;
-}
-.slicknav_menu
-{
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    font-size: 16px;
-    padding: 5px;
-    display: none;    
-    position: fixed;
-    right: 0;
-    width: 100%;
-    z-index: 99999;
-}
-ul.slicknav_nav 
-{
-    background: #262626 none repeat scroll 0 0;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 80%;
- }
-.slicknav_btn {top: 35px;}
-#main_menu{width: 100%; 
-    position: relative;
-}
-.logo_area
-{
-    width: 300px; 
-    height: 300px; 
-    position: absolute; 
-    left: 50%; 
-    top: 0; 
-    content: ""; 
-    margin-left:-190px; 
-    text-align: center; 
-}
-.header h2
-{
-    color: rgb(98, 79, 221);
-}
-
-.cardbox
-{
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    display: grid;
-    grid-template-columns:repeat(2,1fr) ;
-    grid-gap: 20px;
-}
-.cardbox .investor
-{
-    position: relative;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    min-height: 150px;
-    min-width: 80px;
-    border-radius: 45px;
-    margin: 50px;
-    background-image: url(invest.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.cardbox .innovator
-{
-    position: relative;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    min-height: 150px;
-    min-width: 80px;
-    border-radius: 45px;
-    margin: 50px;
-    background-image: url(innovate.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.cardbox .card .cardName
-{
-    color: #ffffff;
-}
-.cardbox .card .iconBox
-{
-    font-size: 4.5em;
-    color: #ffffff;
-    size: 30px;
-}
- .material-icons
-{
-    font-size: 100px;
-    color: #ffffff;
-    size: 50px;
-}
-
-@media only screen and (min-width: 200px) and (max-width: 767px)
- { 
-    .slicknav_menu{display: block;}
-    .inner_main_menu{display: none;}
-    .logo_area {height: auto;left: 0;margin-left: 0;position: absolute;top: 0;width: 130px;}
-    .logo_area img{height: auto;width: 100%;}
-
+.container .row .alert{
+    font-size: 14px;
 }
